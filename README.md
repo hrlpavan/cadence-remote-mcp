@@ -1,4 +1,4 @@
-# ⚡ Cadence-Remote-MCP: Prompt on Mac, Execute on Windows
+#  Cadence-Remote-MCP: Prompt on Mac, Execute on Windows
 
 > **Distributed AI Agent Infrastructure for Cadence Allegro X, OrCAD, and Heavy EDA Workloads via Model Context Protocol (MCP)**
 
