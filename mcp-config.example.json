@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "cadence-worker": {
+      "serverUrl": "https://YOUR-TUNNEL-URL.trycloudflare.com/mcp",
+      "headers": {
+        "Authorization": "Bearer cadence-mcp-key"
+      }
+    }
+  }
+}
