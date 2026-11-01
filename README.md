@@ -8,6 +8,12 @@
 [![EDA](https://img.shields.io/badge/EDA-Cadence%20Allegro%20X-red.svg)]()
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)]()
 
+<p align="center">
+  <img src="assets/hrl_pcb_3d_render.jpg" alt="3D Photorealistic PCB Render (Isometric View)" width="900" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);"/>
+  <br>
+  <em>Figure 1: 3D Photorealistic Isometric Render of the synthesized "HRL" Allegro X PCB layout (Glossy FR-4 substrate, gold ENIG chamfer, routed copper traces, and raised matte-white silkscreen).</em>
+</p>
+
 ---
 
 ## 💡 The Problem & The Solution
@@ -140,6 +146,7 @@ We validated the pipeline end-to-end by prompting from macOS to:
 2. Generate an isolated project directory (`D:\CadenceProjects\HRL_Test\`).
 3. Synthesize a 2-layer FR-4 PCB layout with **`HRL`** silkscreen text and test headers.
 4. Launch the preview in real-time on the Windows screen and stream a live camera snapshot back to macOS.
+5. Render a **3D photorealistic isometric visualization** of the synthesized board with ray-traced ambient lighting, gold ENIG plating, and routed copper topologies.
 
 ---
 
