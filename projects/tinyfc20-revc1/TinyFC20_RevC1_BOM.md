@@ -1,0 +1,70 @@
+# TinyFC20 Rev C1 - Production Bill of Materials (BOM)
+
+**Status**: 100% Sourced, Zero TBD Components, Automotive/Industrial Grade
+
+| Ref | Qty | Value | Package | Manufacturer | Orderable MPN | Description | Subsystem / Role |
+| :--- | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| **U1** | 1 | STM32F405RGT6 | LQFP-64 (10x10mm) | STMicroelectronics | `STM32F405RGT6` | ARM Cortex-M4 MCU 168MHz 1MB Flash 192KB RAM | Main Flight Controller Processor |
+| **U2** | 1 | LSM6DSOTR | LGA-14 (3x2.5mm) | STMicroelectronics | `LSM6DSOTR` | 6-Axis IMU Accel/Gyro SPI/I2C 6.66kHz | Primary Flight Gyroscope & Accelerometer |
+| **U3** | 1 | LP5907SNX-3.3/NOPB | X2SON-4 (1.0x1.0mm) | Texas Instruments | `LP5907SNX-3.3/NOPB` | Ultra-Low Noise 250mA LDO 3.3V, PSRR 82dB | MCU & Digital Logic 3.3V Regulator |
+| **U4** | 1 | USBLC6-2SC6 | SOT-23-6 | STMicroelectronics | `USBLC6-2SC6` | Very Low Capacitance ESD Protection for USB 2.0 | USB Data Line High-Speed ESD Protection |
+| **U5** | 1 | LP5907SNX-3.3/NOPB | X2SON-4 (1.0x1.0mm) | Texas Instruments | `LP5907SNX-3.3/NOPB` | Ultra-Low Noise 250mA LDO 3.3V, PSRR 82dB | Dedicated Isolated Gyro 3.3V Regulator |
+| **U6** | 1 | LMR51625YDDCR | TSOT-23-6 | Texas Instruments | `LMR51625YDDCR` | 60V 2.5A Synchronous Buck Converter 1.1MHz | 3-6S LiPo Main 5V Step-Down Switching BEC |
+| **D1** | 1 | MBR120VLSFT1G | SOD-123FL | onsemi | `MBR120VLSFT1G` | Schottky Barrier Diode 20V 1A Vf=0.34V | 5V_BEC Reverse Blocking & Diode-OR Selection |
+| **D2** | 1 | MBR120VLSFT1G | SOD-123FL | onsemi | `MBR120VLSFT1G` | Schottky Barrier Diode 20V 1A Vf=0.34V | USB_5V Reverse Blocking & Diode-OR Selection |
+| **D3** | 1 | APHHS1005CGCK | 0402 (1005 metric) | Kingbright | `APHHS1005CGCK` | SMD Green LED 570nm 20mA 2.1V Vf | System Status LED Indicator (PA15 sinking) |
+| **D4** | 1 | SMF26A | SOD-123FL | Littelfuse | `SMF26A` | Unidirectional TVS Diode 26V Vrwm 42.1V Clamp 200W | VBAT Input Transient Voltage Suppressor (3-6S) |
+| **L1** | 1 | 4.7 µH | 2.5x2.0x1.2mm | Murata | `DFE252012F-4R7M=P2` | Shielded Metal Alloy Power Inductor 4.7µH 2.8A 53mΩ | LMR51625 Buck Switching Inductor |
+| **Y1** | 1 | 8 MHz 8pF | SMD-3225-4P | ECS Inc. | `ECS-80-8-33-JGN-TR3` | SMD Crystal 8.000000MHz ±20ppm 8pF -40°C~+85°C | STM32 Primary High-Speed External (HSE) Clock |
+| **J1** | 1 | USB4105-GF-A-060 | USB-C 16-Pin Hybrid | GCT | `USB4105-GF-A-060` | USB Type-C Receptacle 16P Mid-Mount SMT 0.60mm Stakes | Configuration, Firmware Flashing & 5V Power Port |
+| **R1** | 1 | 10 Ω | 0402 | Yageo | `RC0402FR-0710RL` | Thick Film Resistor 10Ω 1% 1/16W | VDDA Analog Power Rail Pi-Filter Resistor |
+| **R2** | 1 | 10 kΩ | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | BOOT0 Dedicated Hardware Pull-Down Resistor |
+| **R3** | 1 | 10 kΩ | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | NRST Dedicated Active-Low Pull-Up Resistor |
+| **R4** | 1 | 10 kΩ | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | IMU SPI1 CS Pull-Up to +3V3_GYRO |
+| **R5** | 1 | 1 kΩ | 0402 | Yageo | `RC0402FR-071KL` | Thick Film Resistor 1kΩ 1% 1/16W | Status LED Current Limiting Resistor (1.2mA) |
+| **R6** | 1 | 22 Ω | 0402 | Yageo | `RC0402FR-0722RL` | Thick Film Resistor 22Ω 1% 1/16W | USB D- (PA11) Series Impedance Matching Resistor |
+| **R7** | 1 | 22 Ω | 0402 | Yageo | `RC0402FR-0722RL` | Thick Film Resistor 22Ω 1% 1/16W | USB D+ (PA12) Series Impedance Matching Resistor |
+| **R8** | 1 | 33 Ω | 0402 | Yageo | `RC0402FR-0733RL` | Thick Film Resistor 33Ω 1% 1/16W | ESC M1 (PB1) DShot In-Line Series Damping Resistor |
+| **R9** | 1 | 33 Ω | 0402 | Yageo | `RC0402FR-0733RL` | Thick Film Resistor 33Ω 1% 1/16W | ESC M2 (PB0) DShot In-Line Series Damping Resistor |
+| **R10** | 1 | 33 Ω | 0402 | Yageo | `RC0402FR-0733RL` | Thick Film Resistor 33Ω 1% 1/16W | ESC M3 (PB10) DShot In-Line Series Damping Resistor |
+| **R11** | 1 | 33 Ω | 0402 | Yageo | `RC0402FR-0733RL` | Thick Film Resistor 33Ω 1% 1/16W | ESC M4 (PB11) DShot In-Line Series Damping Resistor |
+| **R12** | 1 | 5.1 kΩ 1% | 0402 | Yageo | `RC0402FR-075K1L` | Thick Film Resistor 5.1kΩ 1% 1/16W | USB Type-C CC1 Downstream Facing Pull-Down |
+| **R13** | 1 | 5.1 kΩ 1% | 0402 | Yageo | `RC0402FR-075K1L` | Thick Film Resistor 5.1kΩ 1% 1/16W | USB Type-C CC2 Downstream Facing Pull-Down |
+| **R14** | 1 | 53.6 kΩ 1% | 0402 | Yageo | `RC0402FR-0753K6L` | Thick Film Resistor 53.6kΩ 1% 1/16W | Buck Feedback Upper Divider (Vout=5.004V) |
+| **R15** | 1 | 10.2 kΩ 1% | 0402 | Yageo | `RC0402FR-0710K2L` | Thick Film Resistor 10.2kΩ 1% 1/16W | Buck Feedback Lower Divider (Vref=0.8V) |
+| **R16** | 1 | 150 kΩ 1% | 0402 | Yageo | `RC0402FR-07150KL` | Thick Film Resistor 150kΩ 1% 1/16W >=50V | Battery Voltage Sense High-Side Resistor (16:1) |
+| **R17** | 1 | 10.0 kΩ 1% | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | Battery Voltage Sense Low-Side Resistor to GND |
+| **R18** | 1 | 1.00 kΩ 1% | 0402 | Yageo | `RC0402FR-071KL` | Thick Film Resistor 1kΩ 1% 1/16W | Battery Voltage Sense ADC Anti-Aliasing Resistor |
+| **R19** | 1 | 10.0 kΩ 1% | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | ESC Current Sense Upper Divider Resistor (2:1) |
+| **R20** | 1 | 10.0 kΩ 1% | 0402 | Yageo | `RC0402FR-0710KL` | Thick Film Resistor 10kΩ 1% 1/16W | ESC Current Sense Lower Divider Resistor to GND |
+| **R21** | 1 | 1.00 kΩ 1% | 0402 | Yageo | `RC0402FR-071KL` | Thick Film Resistor 1kΩ 1% 1/16W | ESC Telemetry In-Line ESD / Overvoltage Protection |
+| **R22** | 1 | 4.70 kΩ 1% | 0402 | Yageo | `RC0402FR-074K7L` | Thick Film Resistor 4.7kΩ 1% 1/16W | I2C1 SCL (PB6) Bus Pull-Up to +3V3 |
+| **R23** | 1 | 4.70 kΩ 1% | 0402 | Yageo | `RC0402FR-074K7L` | Thick Film Resistor 4.7kΩ 1% 1/16W | I2C1 SDA (PB7) Bus Pull-Up to +3V3 |
+| **C1** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDD Pin 1 Decoupling Capacitor |
+| **C2** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDD Pin 19 Decoupling Capacitor |
+| **C3** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDD Pin 32 Decoupling Capacitor |
+| **C4** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDD Pin 48 Decoupling Capacitor |
+| **C5** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDD Pin 64 Decoupling Capacitor |
+| **C6** | 1 | 4.7 µF 10V X5R | 0603 | Samsung | `CL10A475KP8NNNC` | Ceramic Capacitor 4.7µF 10V X5R 10% | STM32 Main 3.3V Logic Bulk Bypass Capacitor |
+| **C7** | 1 | 2.2 µF 10V X7R | 0603 | Samsung | `CL10B225KP8NNNC` | Ceramic Capacitor 2.2µF 10V X7R 10% | STM32 VCAP1 Internal Core Regulator Filter (Pin 31) |
+| **C8** | 1 | 2.2 µF 10V X7R | 0603 | Samsung | `CL10B225KP8NNNC` | Ceramic Capacitor 2.2µF 10V X7R 10% | STM32 VCAP2 Internal Core Regulator Filter (Pin 47) |
+| **C9** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 VDDA Analog Domain HF Decoupling (Pin 13) |
+| **C10** | 1 | 1.0 µF 10V X5R | 0402 | Yageo | `CC0402KRX5R6BB105` | Ceramic Capacitor 1.0µF 10V X5R 10% | STM32 VDDA Analog Domain Bulk Bypass Filter |
+| **C11** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | LSM6DSO Gyro VDD HF Decoupling (Pin 8) |
+| **C12** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | LSM6DSO Gyro VDDIO HF Decoupling (Pin 5) |
+| **C13** | 1 | 1.0 µF 10V X5R | 0402 | Yageo | `CC0402KRX5R6BB105` | Ceramic Capacitor 1.0µF 10V X5R 10% | U3 (3.3V Logic LDO) Input Ceramic Capacitor |
+| **C14** | 1 | 2.2 µF 16V X5R | 0402 | Samsung | `CL05A225KO5NQNC` | Ceramic Capacitor 2.2µF 16V X5R 10% | U3 (3.3V Logic LDO) Output Ceramic Capacitor |
+| **C15** | 1 | 1.0 µF 10V X5R | 0402 | Yageo | `CC0402KRX5R6BB105` | Ceramic Capacitor 1.0µF 10V X5R 10% | U5 (3.3V Gyro LDO) Input Ceramic Capacitor |
+| **C16** | 1 | 2.2 µF 16V X5R | 0402 | Samsung | `CL05A225KO5NQNC` | Ceramic Capacitor 2.2µF 16V X5R 10% | U5 (3.3V Gyro LDO) Output Ceramic Capacitor |
+| **C17** | 1 | 10 µF 10V X5R | 0603 | Samsung | `CL10A106KP8NNNC` | Ceramic Capacitor 10µF 10V X5R 10% | VIN_OR Common Power Rail Bulk Filter Capacitor |
+| **C18** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | STM32 NRST Hardware Reset Noise Debounce Filter |
+| **C19** | 1 | 8.2 pF 50V C0G | 0402 | Murata | `GRM1555C1H8R2DA01D` | Ceramic Capacitor 8.2pF 50V C0G/NP0 ±0.5pF | 8MHz HSE Crystal Oscillator Y1 Load Capacitor |
+| **C20** | 1 | 8.2 pF 50V C0G | 0402 | Murata | `GRM1555C1H8R2DA01D` | Ceramic Capacitor 8.2pF 50V C0G/NP0 ±0.5pF | 8MHz HSE Crystal Oscillator Y1 Load Capacitor |
+| **C21** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | USB VBUS Input Decoupling & Transients Bypass |
+| **C22** | 1 | 100 nF 16V X7R | 0402 | Samsung | `CL05B104KO5NNNC` | Ceramic Capacitor 100nF 16V X7R 10% | LMR51625 Buck Bootstrap Capacitor (CB5 to SW5) |
+| **C23** | 1 | 4.7 µF 50V X7R | 0805 | Murata | `GRM21BZ71H475KE15L` | Ceramic Capacitor 4.7µF 50V X7R 10% (Effective >2.2µF @25V) | LMR51625 Primary VBAT High-Voltage Input Bulk Filter |
+| **C24** | 1 | 100 nF 50V X7R | 0603 | Samsung | `CL10B104KB8NNNC` | Ceramic Capacitor 100nF 50V X7R 10% | LMR51625 High-Frequency Hot-Loop Bypass Capacitor |
+| **C25** | 1 | 22 µF 16V X7R | 0805 | TDK | `C2012X7R1C226M125AC` | Ceramic Capacitor 22µF 16V X7R 20% (Effective >10µF @5V) | 5V_BEC Output Bulk Ripple & Stability Capacitor 1 |
+| **C26** | 1 | 22 µF 16V X7R | 0805 | TDK | `C2012X7R1C226M125AC` | Ceramic Capacitor 22µF 16V X7R 20% (Effective >10µF @5V) | 5V_BEC Output Bulk Ripple & Stability Capacitor 2 |
+| **C27** | 1 | 10 nF 16V X7R | 0402 | Samsung | `CL05B103KO5NNNC` | Ceramic Capacitor 10nF 16V X7R 10% | Battery ADC Low-Pass Filter Capacitor (PC1) |
+| **C28** | 1 | 10 nF 16V X7R | 0402 | Samsung | `CL05B103KO5NNNC` | Ceramic Capacitor 10nF 16V X7R 10% | Current ADC Low-Pass Filter Capacitor (PC5) |

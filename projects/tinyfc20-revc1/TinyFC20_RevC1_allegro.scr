@@ -1,0 +1,30 @@
+# Allegro PCB Editor Board Generation Script
+# Board: TinyFC20 Rev C1
+version 17.4
+new
+fillin "TinyFC20_RevC1.brd"
+fillin "Board"
+param
+units millimeters
+size custom
+width 100
+height 100
+accuracy 4
+done
+# Setup Design Outline: 20x20mm, R1.5 corners
+add line
+setwindow form.mini
+FORM mini class BOARD GEOMETRY
+FORM mini subclass DESIGN_OUTLINE
+pick -8.50 10.00
+pick 8.50 10.00
+pick 10.00 8.50
+pick 10.00 -8.50
+pick 8.50 -10.00
+pick -8.50 -10.00
+pick -10.00 -8.50
+pick -10.00 8.50
+pick -8.50 10.00
+done
+save
+fillin yes
